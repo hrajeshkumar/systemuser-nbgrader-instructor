@@ -1,4 +1,4 @@
 c = get_config()
 
-c.NbGrader.course_id = 'cogsci131'
-c.TransferApp.exchange_directory = '/usr/local/share/exchange'
+c.Exchange.course_id = 'cogsci131'
+c.Exchange.root = '/usr/local/share/exchange'
