@@ -34,3 +34,8 @@ RUN nbgrader extension install
 
 # Create nbgrader profile and add nbgrader config
 ADD nbgrader_config.py /etc/jupyter/nbgrader_config.py
+
+# Install the nbgrader extensions
+RUN jupyter nbextension install --sys-prefix --py nbgrader
+RUN jupyter nbextension enable --sys-prefix --py nbgrader
+RUN jupyter serverextension enable --sys-prefix --py nbgrade
