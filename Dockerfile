@@ -1,4 +1,4 @@
-FROM jupyter/systemuser
+FROM jupyterhub/systemuser
 
 # Update pip
 RUN pip install --upgrade pip
