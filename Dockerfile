@@ -39,3 +39,11 @@ ADD nbgrader_config.py /etc/jupyter/nbgrader_config.py
 RUN jupyter nbextension install --sys-prefix --py nbgrader
 RUN jupyter nbextension enable --sys-prefix --py nbgrader
 RUN jupyter serverextension enable --sys-prefix --py nbgrader
+
+ARG NB_UID="1000"
+
+USER root
+# Configure container startup
+CMD ["start-singleuser.sh"]
+
+USER $NB_ID
